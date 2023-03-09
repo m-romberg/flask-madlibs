@@ -12,11 +12,13 @@
     <div class="mb-3 row">
       <label class="col-5 col-form-label text-end">{{ noun }}</label>
       <div class="col-7">
+        {% for prompt in prompts %}
         <input
-            name="noun"
-            required
-            aria-label="noun"
-            class="form-control">
+        name= {{prompt}}
+        required
+        aria-label={{prompt}}
+        class="form-control">
+        {% endfor %}
       </div>
     </div>
 
